@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="alurapic">
+<!-- Registrar módulo principal -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Alurapic</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">]
+
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/controllers/img-controller.js"></script>
+</head>
+
+<body ng-controller="ImgController">
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">RandomPics</h1>
+        </div>
+        <div class="panel panel-default" ng-repeat="img in imgs">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{img.titulo}}</h3>
+            </div>
+            <div class="panel-body">
+                <img class="img-responsive center-block" src="{{ img.url }}" alt="{{ img.title }}">
+            </div>
+        </div>
+    </div> <!-- fim container -->
+</body>
+
+</html>
