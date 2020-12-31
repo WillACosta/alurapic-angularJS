@@ -1,6 +1,8 @@
 ## Angular JS
 
-Estudos do Angular.js em sua versão defasada
+Estudos do Angular.js
+
+## Anotações
 
 - Importar o script do angular.min.js
 
