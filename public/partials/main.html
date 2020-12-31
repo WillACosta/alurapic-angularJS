@@ -1,0 +1,27 @@
+<div class="jumbotron">
+    <h1 class="text-center">RandomPics</h1>
+</div>
+
+<div class="row col-md-12">
+
+    <form class="mb-3">
+        <div class="input-group">
+            <span class="input-group-btn">
+                <a href="images/new" class="btn btn-primary">New Image</a>
+            </span>
+            <!-- <label for="filter mb-2">Filtrar por</label> -->
+            <input type="text" class="form-control" placeholder="Filter of..." id='filter' ng-model="filterModel"
+                ng-model-options="{ debounce: 500 }">
+        </div>
+
+    </form>
+</div>
+
+<div class="row">
+    <panel-default class="col-md-2" ng-repeat="img in imgs | filter: filterModel" titulo="{{img.titulo}}">
+        <img class="img-responsive center-block" src="{{ img.url }}" alt="{{ img.titulo }}">
+        <a href="images/edit/{{ img._id}}" class="btn btn-default btn-block mt-2">Editar</a>
+
+        <btn-danger label="Remover" action='delete(img)'></btn-danger>
+    </panel-default>
+</div>
